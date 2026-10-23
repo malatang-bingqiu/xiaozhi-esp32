@@ -1,0 +1,21 @@
+dependencies:
+  idf: ">=5.5.2"
+
+  # Local application runtime
+  78/esp-ml307: ~3.6.3
+  78/esp-wifi-connect: ~3.0.2
+  78/xiaozhi-fonts: ~1.6.0
+  espressif/button: ~4.1.5
+
+  # Audio and wake word
+  espressif/esp-sr: ~2.3.0
+  espressif/esp_codec_dev: ~1.5.4
+  espressif/esp_audio_codec: ~2.4.1
+  espressif/esp_audio_effects: ~1.2.1
+
+  # RLCD UI
+  lvgl/lvgl: ~9.4.0
+  esp_lvgl_port: ~2.7.0
+
+  # Weather response decompression
+  espressif/zlib: ^1.2.13

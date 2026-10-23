@@ -1,0 +1,79 @@
+menu "Waveshare ESP32-S3-RLCD-4.2"
+
+config OTA_URL
+    string "Default OTA URL"
+    default "https://api.tenclass.net/xiaozhi/ota/"
+    help
+        The application uses this URL to check for firmware and service updates.
+
+config BOARD_TYPE_WAVESHARE_S3_RLCD_4_2
+    bool
+    default y
+    depends on IDF_TARGET_ESP32S3
+
+config LANGUAGE_ZH_CN
+    bool
+    default y
+
+config FLASH_DEFAULT_ASSETS
+    bool
+    default y
+
+config USE_DEFAULT_MESSAGE_STYLE
+    bool
+    default y
+
+config USE_WECHAT_MESSAGE_STYLE
+    bool
+    default n
+
+config USE_EMOTE_MESSAGE_STYLE
+    bool
+    default n
+
+config USE_AFE_WAKE_WORD
+    bool
+    default y
+
+config SEND_WAKE_WORD_DATA
+    bool "Send wake word data to the server"
+    default y
+
+config USE_AUDIO_PROCESSOR
+    bool
+    default y
+
+config USE_DEVICE_AEC
+    bool "Enable device-side AEC"
+    default y
+
+config USE_SERVER_AEC
+    bool
+    default n
+
+config USE_AUDIO_DEBUGGER
+    bool "Enable audio debugger"
+    default n
+
+config AUDIO_DEBUG_UDP_SERVER
+    string "Audio debug UDP server"
+    default "192.168.2.100:8000"
+    depends on USE_AUDIO_DEBUGGER
+
+config USE_HOTSPOT_WIFI_PROVISIONING
+    bool
+    default y
+
+config USE_ACOUSTIC_WIFI_PROVISIONING
+    bool
+    default n
+
+config USE_ESP_BLUFI_WIFI_PROVISIONING
+    bool
+    default n
+
+config RECEIVE_CUSTOM_MESSAGE
+    bool "Enable custom message reception"
+    default n
+
+endmenu
